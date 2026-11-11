@@ -4,14 +4,7 @@
 
 ```shell
 // upgrade uv.lock
-$ uv lock --upgrade
-$ uv sync
-```
-
-<br/>
-
-```shell
-$ uv add --upgrade langchain langchain-ollama langchain-openai python-dotenv black isort
+$ uv remove langchain langchain-ollama langchain-openai python-dotenv black isort && uv add langchain langchain-ollama langchain-openai python-dotenv black isort
 ```
 
 <br/>
