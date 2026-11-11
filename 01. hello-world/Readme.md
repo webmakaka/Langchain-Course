@@ -3,8 +3,7 @@
 <br/>
 
 ```shell
-// upgrade uv.lock
-$ uv remove langchain langchain-ollama langchain-openai python-dotenv black isort && uv add langchain langchain-ollama langchain-openai python-dotenv black isort
+$ uv sync
 ```
 
 <br/>
