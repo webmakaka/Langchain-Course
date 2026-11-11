@@ -1,4 +1,10 @@
-# LangChain- Develop AI Agents with LangChain & LangGraph 🦜🔗
+# [Udemy] Develop AI Agents with LangChain & LangGraph [ENG, 2026]
+
+**Original repo:**  
+https://github.com/emarco177/langchain-course
+
+
+<br/>
 
 **Learn LangChain and LangGraph by building real world AI Agents (Python, Latest Version V.1.0+)**
 
