@@ -3,6 +3,22 @@
 **Original repo:**  
 https://github.com/emarco177/langchain-course
 
+<br/>
+
+## Free API for run code samples
+
+<br/>
+
+### Vireonix
+
+```python
+llm = ChatOpenAI(
+  model="auto",
+  temperature=0,
+  base_url="https://vireonix.ai/v1",
+  api_key="not-needed"
+);
+```
 
 <br/>
 
