@@ -10,15 +10,7 @@ https://github.com/emarco177/langchain-course
 
 This course is designed to teach you how to QUICKLY harness the power of the LangChain library for LLM applications. Build 3 end-to-end working LangChain based generative AI applications with no fluff, no toy examples - just real projects using real APIs and real-world skills.
 
-![LangChain Logo](/static/LangChain_OSS%20Lockup_light.png)
-![LangGraph Logo](/static/LangGraph_OSS%20Lockup_light.png)
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/EdenMarco177?style=social)](https://twitter.com/EdenMarco177)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-
-[![udemy](https://img.shields.io/badge/LangChain%20Udemy%20Course%20Coupon%20%2414.99-brightgreen)](https://www.udemy.com/course/langchain/?couponCode=NOV-2026)
-
-
+<br/>
 
 ## 💡 What You'll Build 
 
@@ -124,34 +116,4 @@ By the end of this course, you'll be able to:
 - Deploy agents to production environments
 - Handle error correction and self-improvement in agents
 - Optimize agent performance and cost efficiency
-
-
-
-
-
-## 🙏 Acknowledgements 
-
-Big thanks to the **LangChain / LangGraph** team and their excellent [documentation and tutorials](https://langchain-ai.github.io/langgraph/tutorials/introduction/) that make this course possible.
-
-## 🌟 Support
-
-If you find this project helpful, please consider:
-- ⭐ Starring the repository
-- 🐛 Reporting issues
-- 💡 Contributing improvements
-- 📢 Sharing with others
-
----
-
-<div align="center">
-
-### 🔗 Connect with Me
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.udemy.com/course/langchain/?referralCode=D981B8213164A3EA91AC)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eden-marco/)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/EdenEmarco177)
-
-**Built with ❤️ by Eden Marco**
-
-</div>
 
