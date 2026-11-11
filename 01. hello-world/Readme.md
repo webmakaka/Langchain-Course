@@ -1,7 +1,17 @@
 # Hello World
 
-```python
+<br/>
+
+```shell
+// upgrade uv.lock
+$ uv lock --upgrade
 $ uv sync
+```
+
+<br/>
+
+```shell
+$ uv add --upgrade langchain langchain-ollama langchain-openai python-dotenv black isort
 ```
 
 <br/>
