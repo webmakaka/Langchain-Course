@@ -78,14 +78,12 @@ Begin!
 Question: {{question}}
 Thought:"""
 
-
 # CHANGE 4: Drop tools= from ollama.chat(). The LLM has no idea it's an agent —
 # all agency comes from the prompt above and our regex parsing below.
 
 @traceable(name="Ollama Chat", run_type="llm")
 def ollama_chat_traced(model, messages, options):
     return ollama.chat(model=model, messages=messages, options=options)
-
 
 # --- Agent Loop ---
 
@@ -147,7 +145,6 @@ def run_agent(question: str):
             observation = f"Error: Tool '{tool_name}' not found. Available tools: {list(tools.keys())}"
         else:
             observation = str(tools[tool_name](*args))
-
 
         print(f"  [Tool Result] {observation}")
 
