@@ -11,9 +11,7 @@ from langsmith import traceable
 MAX_ITERATIONS = 10
 MODEL = "qwen3:1.7b"
 
-
 # --- Tools (LangChain @tool decorator) ---
-
 
 @traceable(run_type="tool")
 def get_product_price(product: str) -> float:
@@ -21,7 +19,6 @@ def get_product_price(product: str) -> float:
     print(f"    >> Executing get_product_price(product='{product}')")
     prices = {"laptop": 1299.99, "headphones": 149.95, "keyboard": 89.50}
     return prices.get(product, 0)
-
 
 @traceable(run_type="tool")
 def apply_discount(price: float, discount_tier: str) -> float:
@@ -82,8 +79,6 @@ Question: {{question}}
 Thought:"""
 
 
-
-
 # CHANGE 4: Drop tools= from ollama.chat(). The LLM has no idea it's an agent —
 # all agency comes from the prompt above and our regex parsing below.
 
@@ -92,17 +87,12 @@ def ollama_chat_traced(model, messages, options):
     return ollama.chat(model=model, messages=messages, options=options)
 
 
-
-
-
 # --- Agent Loop ---
-
 
 @traceable(name="Ollama Agent Loop")
 def run_agent(question: str):
     print(f"Question: {question}")
     print("=" * 60)
-
 
     # CHANGE 5: One prompt string replaces the system/user message split.
     prompt = react_prompt.format(question=question)
@@ -130,8 +120,6 @@ def run_agent(question: str):
             print("\n" + "=" * 60)
             print(f"Final Answer: {final_answer}")
             return final_answer
-
-
 
         # CHANGE 6: Parse tool calls from raw text with regex — fragile if LLM doesn't follow format.
         print(f"  [Parsing] Looking for Action and Action Input in LLM output...")
@@ -166,10 +154,8 @@ def run_agent(question: str):
         # CHANGE 7: History is one growing string re-sent every iteration (replaces messages.append).
         scratchpad += f"{output}\nObservation: {observation}\nThought:"
 
-
     print("ERROR: Max iterations reached without a final answer")
     return None
-
 
 if __name__ == "__main__":
     print("Hello LangChain Agent (.bind_tools)!")
