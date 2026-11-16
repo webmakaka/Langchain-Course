@@ -10,9 +10,7 @@ from langsmith import traceable
 MAX_ITERATIONS = 10
 MODEL = "qwen3:1.7b"
 
-
 # --- Tools (LangChain @tool decorator) ---
-
 
 @tool
 def get_product_price(product: str) -> float:
@@ -20,7 +18,6 @@ def get_product_price(product: str) -> float:
     print(f"    >> Executing get_product_price(product='{product}')")
     prices = {"laptop": 1299.99, "headphones": 149.95, "keyboard": 89.50}
     return prices.get(product, 0)
-
 
 @tool
 def apply_discount(price: float, discount_tier: str) -> float:
@@ -31,9 +28,7 @@ def apply_discount(price: float, discount_tier: str) -> float:
     discount = discount_percentages.get(discount_tier, 0)
     return round(price * (1 - discount / 100), 2)
 
-
 # --- Agent Loop ---
-
 
 @traceable(name="LangChain Agent Loop")
 def run_agent(question: str):
@@ -102,7 +97,6 @@ def run_agent(question: str):
 
     print("ERROR: Max iterations reached without a final answer")
     return None
-
 
 if __name__ == "__main__":
     print("Hello LangChain Agent (.bind_tools)!")
