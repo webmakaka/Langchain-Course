@@ -99,8 +99,6 @@ def run_agent(question: str):
         "apply_discount": apply_discount,
     }
 
-
-
     print(f"Question: {question}")
     print("=" * 60)
 
@@ -154,7 +152,6 @@ def run_agent(question: str):
 
         # Difference 7: Direct function call instead of tool.invoke()
         observation = tool_to_use(**tool_args)
-
 
         print(f"  [Tool Result] {observation}")
 
