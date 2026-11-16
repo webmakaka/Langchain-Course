@@ -8,9 +8,7 @@ from langsmith import traceable
 MAX_ITERATIONS = 10
 MODEL = "qwen3:1.7b"
 
-
 # --- Tools (LangChain @tool decorator) ---
-
 
 @traceable(run_type="tool")
 def get_product_price(product: str) -> float:
@@ -18,7 +16,6 @@ def get_product_price(product: str) -> float:
     print(f"    >> Executing get_product_price(product='{product}')")
     prices = {"laptop": 1299.99, "headphones": 149.95, "keyboard": 89.50}
     return prices.get(product, 0)
-
 
 @traceable(run_type="tool")
 def apply_discount(price: float, discount_tier: str) -> float:
@@ -70,7 +67,6 @@ tools_for_llm = [
     },
 ]
 
-
 # NOTE: Ollama can also auto-generate these schemas if you pass the functions
 # directly as tools (similar to LangChain's @tool decorator):
 #   tools_for_llm = [get_product_price, apply_discount]
@@ -90,13 +86,11 @@ tools_for_llm = [
 # --- Helper: traced Ollama call ---
 # Difference 3: Without LangChain, we must manually trace LLM calls for LangSmith.
 
-
 @traceable(name="Ollama Chat", run_type="llm")
 def ollama_chat_traced(messages):
     return ollama.chat(model=MODEL, tools=tools_for_llm, messages=messages)
 
 # --- Agent Loop ---
-
 
 @traceable(name="Ollama Agent Loop")
 def run_agent(question: str):
@@ -174,7 +168,6 @@ def run_agent(question: str):
 
     print("ERROR: Max iterations reached without a final answer")
     return None
-
 
 if __name__ == "__main__":
     print("Hello LangChain Agent (.bind_tools)!")
